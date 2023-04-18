@@ -11,6 +11,13 @@
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write ."
   },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "yarn run lint:fix",
+      "yarn run prettier:fix",
+      "git add ."
+    ]
+  },
   "dependencies": {
     "@types/node": "18.15.11",
     "@types/react": "18.0.37",
